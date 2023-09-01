@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Navbar from "./components/Navbar/Navbar";
+import NavbarResponsive from "./components/NavbarResponsive/NavbarResponsive";
+import Home from "./components/Home/Home";
 
-function App() {
-  return (
+const App = () =>{
+  const [hamActive, setHamActive] = useState(false);
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar hamActive={hamActive} setHamActive={setHamActive}/>
+      <NavbarResponsive hamActive={hamActive} setHamActive={setHamActive}/>
+      <Home />
     </div>
   );
-}
-
+};
 export default App;
