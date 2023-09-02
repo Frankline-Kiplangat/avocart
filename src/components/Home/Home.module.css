@@ -1,6 +1,6 @@
 .homeWrapper {
     width: 100%;
-    min-height: 460px;
+    min-height: 80vh;
     background: #deedd6;
     position: relative;
     justify-content: flex-start;
